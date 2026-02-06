@@ -1,0 +1,252 @@
+.col-1 {
+  width: calc(100% / 12);
+}
+
+.col-1_5 {
+  width: calc(1.5 * 100% / 12);
+}
+
+.col-0_5 {
+  width: calc(0.5 * 100% / 12);
+}
+
+.col-2 {
+  width: calc(2 * 100% / 12);
+}
+
+.col-3 {
+  width: calc(3 * 100% / 12);
+}
+
+.col-4 {
+  width: calc(4 * 100% / 12);
+}
+
+.col-5 {
+  width: calc(5 * 100% / 12);
+}
+
+.col-5_5 {
+  width: calc(5.5 * 100% / 12);
+}
+
+.col-6 {
+  width: calc(6 * 100% / 12);
+}
+
+.col-7 {
+  width: calc(7 * 100% / 12);
+}
+
+.col-8 {
+  width: calc(8 * 100% / 12);
+}
+
+.col-9 {
+  width: calc(9 * 100% / 12);
+}
+
+.col-10 {
+  width: calc(10 * 100% / 12);
+}
+
+.col-11 {
+  width: calc(11 * 100% / 12);
+}
+
+.col-12 {
+  width: calc(12 * 100% / 12);
+}
+
+.flex {
+  display: flex;
+}
+
+.summary-grid {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 25px;
+  justify-content: space-evenly;
+  padding: 25px 10px;
+  background: linear-gradient(to right, #588fe2, #0c3674);
+}
+
+.summary-card {
+  border-radius: 8px;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.summary-label {
+  padding: 0px 15px 0px 0px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard{
+  background: #DFE2E9;
+}
+.dashboard-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  align-items: stretch; /* 🔥 important */
+}
+
+.chart-container {
+  height: 100%;
+}
+
+/* LEFT SIDE */
+.drivers-section {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Make DriversChart fill full height */
+.drivers-section > * {
+  flex: 1;
+}
+
+/* RIGHT SIDE */
+.right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+/* Top right cards */
+.risk-recommendations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Bottom chart */
+.revenue-trend {
+  flex: 1; /* 🔥 pushes height to match drivers */
+}
+
+.driver {
+  font-size: 27px;
+  font-weight: 600;
+}
+.driver-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  margin: 10px 5px;
+  font-weight: 500;
+}
+
+.driver-value{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.driver-delta {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.driver-delta.pos {
+  color: #2ecc71; 
+}
+
+.driver-delta.neg {
+  color: #e74c3c; }
+
+  .driver-delta.pos::before {
+  content: "▲ ";
+}
+
+.driver-delta.neg::before {
+  content: "▼ ";
+}
+
+.driver-row {
+  margin: 10px 5px;
+}
+.mini-chart {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.risk {
+      font-size: 27px;
+    font-weight: 600;
+}
+
+.risk-card {
+  margin-bottom: 16px;
+}
+
+.risk-title {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 12px;
+}
+
+.risk-section {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 6px;
+}
+
+.risk-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #e6983c;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.risk-label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.recommendation-title{
+  font-size: 25px;
+  font-weight: 600;
+  margin: 12px;
+}
+
+.recommendation-dot {
+  width: 18px;
+  height: 18px;
+  background-color: #e6983c;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  line-height: 1;
+}
+
+.revenue-card {
+  width: 100%;
+}
+
+.revenue-title {
+  font-size: 27px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+
