@@ -10,8 +10,7 @@ export default function Recommendations() {
   }, []);
 
   return (
-    <Card>
-      <CardContent>
+   <div className="recommendation flex">
         <div className="recommendation-title">Recommended Action</div>
         <List>
   {items.map((item, i) => (
@@ -22,7 +21,6 @@ export default function Recommendations() {
   ))}
 </List>
 
-      </CardContent>
-    </Card>
+     </div>
   );
 }

@@ -1,0 +1,12 @@
+{
+  "name": "skygeni",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend -- --open\"",
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm run dev --prefix frontend -- --open"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}

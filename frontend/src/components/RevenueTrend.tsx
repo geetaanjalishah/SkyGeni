@@ -5,6 +5,7 @@ import {
   Line,
   XAxis,
   YAxis,
+  Tooltip,
   ResponsiveContainer,
   CartesianGrid,
 } from "recharts";

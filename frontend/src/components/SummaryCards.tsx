@@ -19,18 +19,37 @@ export default function SummaryCards() {
   ]
 
   return (
-    <div className="summary-grid">
-      {items.map(item => (
-        <div key={item.label} className="summary-card flex">
-  <div className="summary-label">
-    {item.label}
-  </div>
-  <div className="summary-value">
-    {item.value}
-  </div>
+   <div className="summary-grid">
+  {items.map(item => {
+    const isGap = item.label === "Gap %"
+
+    const gapValue =
+      isGap && typeof item.value === "string"
+        ? parseFloat(item.value)
+        : 0
+
+    return (
+      <div key={item.label} className="summary-card flex">
+        <div className="summary-label">
+          {item.label}
+        </div>
+
+        <div
+          className={`summary-value ${
+            isGap
+              ? gapValue >= 0
+                ? "pos"
+                : "neg"
+              : ""
+          }`}
+        >
+          {item.value}
+        </div>
+      </div>
+    )
+  })}
 </div>
 
-      ))}
-    </div>
+     
   )
 }
