@@ -4,10 +4,6 @@ import driversRoutes from "./routes/drivers"
 import riskRoutes from "./routes/riskFactors"
 import recommendationRoutes from "./routes/recommendations"
 import revenueTrend from "./routes/revenueTrend"
-
-
-
-
 import summaryRoutes from "./routes/summary"
 
 const app = express()
@@ -21,8 +17,6 @@ app.use("/api/drivers", driversRoutes)
 app.use("/api/risk-factors", riskRoutes)
 app.use("/api/recommendations", recommendationRoutes)
 app.use("/api/revenue-trend", revenueTrend)
-
-
 
 
 app.listen(PORT, () => {

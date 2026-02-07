@@ -12,15 +12,16 @@ export default function Recommendations() {
   return (
     <Card>
       <CardContent>
-        <div className="recommendation-title">Recommendations</div>
+        <div className="recommendation-title">Recommended Action</div>
         <List>
-          {items.map((item, i) => (
-            <ListItem key={i}>
-              <span className="recommendation-dot">▲</span>
-              {item}
-            </ListItem>
-          ))}
-        </List>
+  {items.map((item, i) => (
+    <ListItem key={i} className="recommendation-item">
+      <span className="recommendation-dot">▲</span>
+      <span className="recommendation-text">{item}</span>
+    </ListItem>
+  ))}
+</List>
+
       </CardContent>
     </Card>
   );

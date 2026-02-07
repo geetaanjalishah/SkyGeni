@@ -13,10 +13,10 @@ export default function SummaryCards() {
   if (!data) return null
 
   const items = [
-    { label: "Revenue:", value: data.revenue },
+    { label: "QTD Revenue:", value: data.revenue },
     { label: "Target:", value: data.target },
     { label: "Gap %", value: `${data.gapPercent.toFixed(1)}%` },
-    { label: "QoQ Change", value: `${data.qoqChange}%` }
+    { label: "QoQ Change:", value: `${data.qoqChange}%` }
   ]
 
   return (

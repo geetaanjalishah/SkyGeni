@@ -17,21 +17,14 @@ export default function Dashboard() {
 
         <section className="right-section">
           <div className="risk-recommendations">
-            <div className="risk">
             <RiskTable />
-
-            </div>
-            <div className="recommendation">
-
             <Recommendations />
-            </div>
           </div>
-
           <div className="revenue-trend">
             <RevenueTrend />
           </div>
         </section>
       </div>
     </div>
-  )
+  );
 }

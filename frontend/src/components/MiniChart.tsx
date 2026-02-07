@@ -4,9 +4,10 @@ import * as d3 from "d3"
 type Props = {
   data: number[]
   type: "line" | "area" | "bar"
+    color?: string
 }
 
-export default function MiniChart({ data, type }: Props) {
+export default function MiniChart({ data, type, color = "#4da3ff" }: Props) {
   const ref = useRef<SVGSVGElement | null>(null)
 
   useEffect(() => {
@@ -33,14 +34,14 @@ export default function MiniChart({ data, type }: Props) {
         .line<number>()
         .x((_, i) => x(i))
         .y(d => y(d))
-        .curve(d3.curveMonotoneX)
+        .curve(d3.curveLinear)
 
       svg
         .append("path")
         .datum(data)
         .attr("d", line)
         .attr("fill", "none")
-        .attr("stroke", "#4da3ff")
+        .attr("stroke", color)
         .attr("stroke-width", 2)
     }
 
@@ -56,7 +57,8 @@ export default function MiniChart({ data, type }: Props) {
         .append("path")
         .datum(data)
         .attr("d", area)
-        .attr("fill", "rgba(77,163,255,0.3)")
+        .attr("fill", color)
+        .attr("fill-opacity", 0.3)
     }
 
     if (type === "bar") {
@@ -71,16 +73,16 @@ export default function MiniChart({ data, type }: Props) {
         .attr("y", d => y(d))
         .attr("width", barWidth)
         .attr("height", d => height - y(d))
-        .attr("fill", "#1976d2")
+        .attr("fill", color)
     }
-  }, [data, type])
+  }, [data, type, color])
 
-return (
-  <svg
-    ref={ref}
-    viewBox="0 0 120 30"
-    preserveAspectRatio="none"
-    className="mini-chart"
-  />
-)
+  return (
+    <svg
+      ref={ref}
+      viewBox="0 0 120 30"
+      preserveAspectRatio="none"
+      className="mini-chart"
+    />
+  )
 }

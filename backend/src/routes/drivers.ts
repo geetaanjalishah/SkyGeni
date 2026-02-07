@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
   const lostDeals = deals.filter((d: any) => d.status === "lost")
   const openDeals = deals.filter((d: any) => d.status === "open")
 
-  // 1. Pipeline size (open deals)
+  // 1. Pipeline size 
   const pipelineSize = openDeals.reduce(
     (sum: number, d: any) => sum + (d.amount || 0),
     0
