@@ -5,7 +5,6 @@ import {
   Line,
   XAxis,
   YAxis,
-  Tooltip,
   ResponsiveContainer,
   CartesianGrid,
 } from "recharts";
@@ -39,7 +38,6 @@ export default function RevenueTrend() {
 
             <XAxis dataKey="month" />
             <YAxis tickFormatter={(v) => `${v / 1000}K`} />
-
 
             <Bar
               dataKey="revenue"

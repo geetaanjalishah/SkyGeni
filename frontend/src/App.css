@@ -176,7 +176,6 @@
 
 .revenue-trend {
   flex: 1;
-  
 }
 
 .driver {
@@ -243,19 +242,16 @@
   background: rgba(243, 241, 241, 0.753);
 }
 
-
-
 .risk-recommendations {
   flex: 1;
-     max-height: 350px;
+  max-height: 350px;
 }
 
-.recommendation{
+.recommendation {
   display: flex;
   flex-direction: column;
   background: #ffffff;
-   max-height: 350px;
-
+  max-height: 350px;
 }
 .revenue-trend {
   height: 100%;
@@ -375,7 +371,7 @@
   line-height: 1.4;
 }
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   gap: 16px;
@@ -385,29 +381,28 @@
   flex-wrap: wrap;
   color: #ffffff;
 }
-.logo{
+.logo {
   width: 40px;
   height: 40px;
 }
-.header-left{
-    display: flex;
-        align-items: center;
+.header-left {
+  display: flex;
+  align-items: center;
 }
 
-.header-right{
-    display: flex;
-        align-items: center;
+.header-right {
+  display: flex;
+  align-items: center;
 }
 
-.icon{
-    width: 30px;
+.icon {
+  width: 30px;
   height: 30px;
-        padding: 0 2px;
-        color: #ffffff;
-
+  padding: 0 2px;
+  color: #ffffff;
 }
 
-.title{
+.title {
   font-size: 25px;
   padding: 0 15px;
 }

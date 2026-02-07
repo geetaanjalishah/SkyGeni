@@ -1,55 +1,45 @@
-import { useEffect, useState } from "react"
-import { getSummary } from "../api/api"
-import '../App.css'
+import { useEffect, useState } from "react";
+import { getSummary } from "../api/api";
+import "../App.css";
 
 export default function SummaryCards() {
-  const [data, setData] = useState<any>(null)
+  const [data, setData] = useState<any>(null);
 
   useEffect(() => {
-    getSummary().then(res => setData(res.data))
-  }, [])
+    getSummary().then((res) => setData(res.data));
+  }, []);
 
-  if (!data) return null
+  if (!data) return null;
 
   const items = [
     { label: "QTD Revenue:", value: data.revenue },
     { label: "Target:", value: data.target },
     { label: "Gap %", value: `${data.gapPercent.toFixed(1)}%` },
-    { label: "QoQ Change:", value: `${data.qoqChange}%` }
-  ]
+    { label: "QoQ Change:", value: `${data.qoqChange}%` },
+  ];
 
   return (
-   <div className="summary-grid">
-  {items.map(item => {
-    const isGap = item.label === "Gap %"
+    <div className="summary-grid">
+      {items.map((item) => {
+        const isGap = item.label === "Gap %";
 
-    const gapValue =
-      isGap && typeof item.value === "string"
-        ? parseFloat(item.value)
-        : 0
+        const gapValue =
+          isGap && typeof item.value === "string" ? parseFloat(item.value) : 0;
 
-    return (
-      <div key={item.label} className="summary-card flex">
-        <div className="summary-label">
-          {item.label}
-        </div>
+        return (
+          <div key={item.label} className="summary-card flex">
+            <div className="summary-label">{item.label}</div>
 
-        <div
-          className={`summary-value ${
-            isGap
-              ? gapValue >= 0
-                ? "pos"
-                : "neg"
-              : ""
-          }`}
-        >
-          {item.value}
-        </div>
-      </div>
-    )
-  })}
-</div>
-
-     
-  )
+            <div
+              className={`summary-value ${
+                isGap ? (gapValue >= 0 ? "pos" : "neg") : ""
+              }`}
+            >
+              {item.value}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
