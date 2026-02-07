@@ -29,23 +29,22 @@ SkyGeni/
 ├── frontend/       # React dashboard UI  
 ├── package.json    # Root scripts (runs both apps)  
 └── README.md  
-
+└── THINKING.md 
 ---
 
 ## 🚀 Getting Started
 
-### 1️⃣ Install root dependencies
+### 1️⃣ Install root dependencies (one command)
 
-npm install
+- From the root SkyGeni folder:
 
+npm run npm-install-all
 
-### 2️⃣ Install backend dependencies
-cd backend
-npm install
+- This installs:
 
-### 3️⃣ Install frontend dependencies
-cd ../frontend
-npm install
+Root dependencies
+Backend dependencies
+Frontend dependencies
 
 ### ▶️ Running the Project
 
@@ -54,9 +53,8 @@ Run frontend & backend together
 
 npm run dev
 
-- Backend runs on: http://localhost:5000
-- Frontend runs on: http://localhost:3000 (opens automatically)
-
+- Backend runs on: http://localhost:4000
+- Frontend runs on: http://localhost:5173 (opens automatically)
 
 ## Run individually
 
